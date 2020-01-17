@@ -1,0 +1,187 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 103050,
+            "max" : [
+                18267
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 18268,
+            "max" : [
+                0.25270000100135803,
+                0.917900025844574,
+                -1.183899998664856
+            ],
+            "min" : [
+                -0.23160000145435333,
+                0.16249999403953552,
+                -1.618299961090088
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 18268,
+            "max" : [
+                0.999969482421875,
+                0.999664306640625,
+                0.99981689453125
+            ],
+            "min" : [
+                -0.999969482421875,
+                -0.999786376953125,
+                -0.99993896484375
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 18268,
+            "max" : [
+                0.9999831318855286,
+                0.9999523162841797,
+                0.9999962449073792,
+                1.0
+            ],
+            "min" : [
+                -0.997673749923706,
+                -0.9998934268951416,
+                -0.9998916983604431,
+                1.0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 18268,
+            "max" : [
+                0.763001024723053,
+                0.9889460001140833
+            ],
+            "min" : [
+                0.009208000265061855,
+                0.07134902477264404
+            ],
+            "type" : "VEC2"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 206100,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 219216,
+            "byteOffset" : 206100,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 219216,
+            "byteOffset" : 425316,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 292288,
+            "byteOffset" : 644532,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 146144,
+            "byteOffset" : 936820,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1082964,
+            "uri" : "Hands.bin"
+        }
+    ],
+    "materials" : [
+        {
+            "alphaMode" : "BLEND",
+            "name" : "DefaultSkin.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.6861000061035156,
+                    0.5103999972343445,
+                    0.4058000147342682,
+                    1.0
+                ],
+                "metallicFactor" : 0.0
+            }
+        },
+        {
+            "name" : "Material.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.640000066757203,
+                    0.003776235562208824,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "base.obj.sub.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TANGENT" : 3,
+                        "TEXCOORD_0" : 4
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "base.obj.sub.001",
+            "rotation" : [
+                0.7071068286895752,
+                0.0,
+                -0.0,
+                0.7071067094802856
+            ]
+        }
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}

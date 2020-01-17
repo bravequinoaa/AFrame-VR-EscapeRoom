@@ -1,0 +1,198 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 4704,
+            "max" : [
+                914
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 915,
+            "max" : [
+                0.49719199538230896,
+                0.4538320004940033,
+                0.27082499861717224
+            ],
+            "min" : [
+                -0.5286800265312195,
+                -0.4012570083141327,
+                -0.7879469990730286
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 915,
+            "max" : [
+                0.999420166015625,
+                0.999420166015625,
+                1.0
+            ],
+            "min" : [
+                -0.999267578125,
+                -0.999420166015625,
+                -1.0
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 915,
+            "max" : [
+                0.9998339414596558,
+                0.9989948868751526,
+                0.9981940984725952,
+                1.0
+            ],
+            "min" : [
+                -0.9994932413101196,
+                -0.9983420968055725,
+                -0.997557520866394,
+                1.0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 915,
+            "max" : [
+                0.9662659764289856,
+                0.9627070017158985
+            ],
+            "min" : [
+                0.028953999280929565,
+                0.009657025337219238
+            ],
+            "type" : "VEC2"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 9408,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 10980,
+            "byteOffset" : 9408,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 10980,
+            "byteOffset" : 20388,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 14640,
+            "byteOffset" : 31368,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7320,
+            "byteOffset" : 46008,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 53328,
+            "uri" : "old_jar.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "jarri",
+            "uri" : "jarri.jpg"
+        }
+    ],
+    "materials" : [
+        {
+            "alphaMode" : "BLEND",
+            "name" : "jarreo_jarri.jpg.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.4190340042114258,
+                    0.2574310004711151,
+                    0.03957099840044975,
+                    1.0
+                ],
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "jar_Plane",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TANGENT" : 3,
+                        "TEXCOORD_0" : 4
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "jar_Plane",
+            "rotation" : [
+                0.7071068286895752,
+                0.0,
+                -0.0,
+                0.7071067094802856
+            ],
+            "scale" : [
+                0.23715826869010925,
+                0.23715826869010925,
+                0.23715826869010925
+            ]
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ]
+}

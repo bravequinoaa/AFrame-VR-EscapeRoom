@@ -1,0 +1,187 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 360,
+            "max" : [
+                153
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 154,
+            "max" : [
+                0.2739907205104828,
+                2.1532177925109863e-06,
+                0.22913384437561035
+            ],
+            "min" : [
+                -0.17629101872444153,
+                -0.03388769179582596,
+                -0.17564335465431213
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 154,
+            "max" : [
+                0.9600512981414795,
+                0.617603063583374,
+                0.6618854403495789
+            ],
+            "min" : [
+                -0.9600512981414795,
+                -0.617389440536499,
+                -0.7980285286903381
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 154,
+            "max" : [
+                1.0,
+                0.977138340473175,
+                0.959220290184021,
+                1.0
+            ],
+            "min" : [
+                -0.5606293678283691,
+                -0.9771376252174377,
+                -0.9592079520225525,
+                -1.0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 154,
+            "max" : [
+                1.0,
+                1.000584000023082
+            ],
+            "min" : [
+                0.0,
+                0.0
+            ],
+            "type" : "VEC2"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 720,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1848,
+            "byteOffset" : 720,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1848,
+            "byteOffset" : 2568,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2464,
+            "byteOffset" : 4416,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1232,
+            "byteOffset" : 6880,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 8112,
+            "uri" : "newsPaper.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "Newspaper.jpg",
+            "uri" : "Newspaper.jpg.jpg"
+        }
+    ],
+    "materials" : [
+        {
+            "alphaMode" : "BLEND",
+            "name" : "Newspaper.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.6049529910087585,
+                    0.6049529910087585,
+                    0.6049529910087585,
+                    1.0
+                ],
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Newspaper.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TANGENT" : 3,
+                        "TEXCOORD_0" : 4
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Newspaper.001"
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ]
+}
