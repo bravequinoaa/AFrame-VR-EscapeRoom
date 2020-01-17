@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+ <html>
+
+
+ <head>
+ 	<title>Test Secene</title>
+ 	<meta charset="utf-8">
+ 	<!-- Link to the Aframe framework-->
+ 	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+ 	</script>
+ 	<!-- Link to the event component-->
+ 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js">
+ 	</script>
+ 	<!-- Link to the animation component-->
+ 	<script src="https://unpkg.com/aframe-animation-component@4.0.0/dist/aframe-animation-component.min.js"></script>
+ 	<!--Needed for setting up movement in the scene-->
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
+ 	<script src="js/app.js" type="text/javascript"></script>
+ </head>
+
+
+
+ <body>
+
+ 	<!--This is the VR scene object  -->
+ 	<a-scene>
+ 		<a-assets>
+ 			<img id="Wall 1" src="textures/brick.jpg">
+ 			<img id="Wall 2" src="textures/brick.jpg">
+ 			<img id="Wall 3" src="textures/brick.jpg">
+ 			<img id="Wall 4" src="textures/brick.jpg">
+
+  			<img id="floor" src="textures/grass.jpg">
+  			<img id="table-texture" src="textures/wood.jpeg">
+  			<img id="cube" src="textures/wood.jpeg">
+  			<img id="ball" src="textures/wood.jpeg">
+  			<img id="crazy-cube" src="textures/wood.jpeg">
+  			<img id="sky" src="textures/sky.JPG">
+
+  			<img id="black" src="textures/black.png">
+		    <img id="footsteps" src="textures/Footsteps.png">
+
+
+
+		   <img id="wind" src="textures/wind_Death.jpg">
+
+
+        	<audio id="snd_steps" src="sounds/steps.wav">
+
+    		<a-asset-item id="keyObj" src='objects/Key_B_02.obj'></a-asset-item>
+        	<a-asset-item id="keyMtl" src='objects/Key_B_02.mtl'></a-asset-item>
+
+		</a-assets>
+
+
+		<!-- skybox -->
+
+		 <a-sky src="#wind"></a-sky>
+
+
+
+
+  	  		<!-- Camera Rig -->
+	  <a-entity id="camera-rig"
+	  			movement-controls="controls: checkpoint"
+	  			checkpoint-controls="mode: animate; animateSpeed: 13.0"
+          sound="src: #snd_steps; on: navigation-start; volume: 4"
+	  			event-set__start="_target: #blink; _event: navigation-start;
+	  							  animation.property: opacity;
+	  							  animation.to: 1;
+	  							  animation.dur: 250;
+	  							  animation.easing: easeOutQuart"
+	  		    event-set__end="_target: #blink; _event: navigation-end;
+	  		    				animation.to: 0;">
+
+	  	<!-- Camera:progressive controls -->
+	  	<a-entity progressive-controls>
+	  		<a-camera look-controls wasd-controls="enabled: false">
+	  			<a-cursor fuse="true"
+	  					  geometry="primitive: sphere; radius: 0.005"
+					  	  material="color: #000000; shader: flat; opacity: 0.5"
+					  	  raycaster="objects: .clickable"
+	  					  animation__fusing="property: scale;
+	  					  					startEvents: fusing;
+	  					  					easing: linear;
+	  					  					fill: foward;
+	  					  					dur: 1000;
+	  					  					from: 1 1 1;
+	  					  					to: 2 2 2"
+  						  animation__mouseleave="property: scale;
+  						  						 startEvents: mouseleave;
+  						  						 easing: linear;
+  						  						 fill: backwards;
+  						  						 dur: 1000;
+  						  						 from: 2 2 2;
+  						  						 to: 1 1 1">
+				</a-cursor>
+				<!-- setup for "blink" the black screen -->
+				<a-image id="blink" src="#black" position="0 0 -0.3" opacity="0"></a-image>
+	  		</a-camera>
+	  	 </a-entity>
+	  	</a-entity>
+
+
+
+
+
+
+
+
+
+
+
+ 	</a-scene>
+
+
+
+
+
+
+
+ </body>
+
+
+
+
+
+
+
+ </html>

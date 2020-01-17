@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VR Scene</title>
+  <meta charset="utf-8">
+  <!-- Link to the Aframe framework-->
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>  
+  </script>
+  <!-- Link to the event component-->
+  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"> 
+  </script>
+  <!-- Link to the animation component-->
+  <script src="https://unpkg.com/aframe-animation-component@4.0.0/dist/aframe-animation-component.min.js"></script>
+  <!--Needed for setting up movement in the scene-->
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
+
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/comp.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+
+
+  <a-scene startup embedded physics>
+
+
+      <a-assets>
+        
+         <img id="black" src="textures/black.png">
+         <img id="cave" src="textures/cave_Death.jpg">
+         <img id="water" src="textures/water_Death.jpg">
+         <img id="WIN" src="textures/Win_scene.jpg">
+
+
+
+
+        <!--gltf models-->
+
+
+        <!--Spawn ZOne and Items---------------------------------------------------------->
+         <a-asset-item id="Spawn_Room" src='objects/Spawn_Room.gltf'></a-asset-item>
+
+         <a-asset-item id="couch1" src='objects/couch.gltf'></a-asset-item>
+
+         <a-asset-item id="table" src='objects/table.gltf'></a-asset-item>
+
+         <a-asset-item id="bookShelf" src='objects/bookShelf.gltf'></a-asset-item>
+
+         <a-asset-item id="tvStand" src='objects/tvStand.gltf'></a-asset-item>
+
+         <a-asset-item id="windowPortal" src='objects/windowPortal.gltf'></a-asset-item>
+
+         <a-asset-item id="doorPortal" src='objects/doorPortal.gltf'></a-asset-item>
+
+         <a-asset-item id="weirdBaby2" src='objects/Hands.gltf'></a-asset-item>
+
+
+       
+
+      
+
+         <a-asset-item id="knife" src='objects/knife.gltf'></a-asset-item>
+
+         <a-asset-item id = "chucky" src= 'objects/chuckyV4.gltf'> </a-asset-item>
+
+
+
+
+         <a-asset-item id="poster" src='objects/posterV2.gltf'></a-asset-item>
+
+        <!--Spawn ZOne and Items--------------------------------------------------------------------->
+
+
+         <!--Ritual Items--------------------------------------------------------------------->
+          <a-asset-item id="candle" src='objects/candle.gltf'></a-asset-item>
+          
+
+
+          <a-asset-item id="waterMug" src='objects/waterMug.gltf'></a-asset-item>
+
+          <a-asset-item id="hairDryer" src='objects/hairDryer.gltf'></a-asset-item>
+
+          <a-asset-item id="plant" src='objects/plant.gltf'></a-asset-item>
+         <!--Ritual Items--------------------------------------------------------------------->
+
+
+
+
+          <!--Water World Items--------------------------------------------------------------------->
+
+
+          <a-asset-item id="waterColorCube" src='objects/waterPosterCube.gltf'></a-asset-item>
+           <a-asset-item id="waterBottle" src='objects/waterBottle.gltf'></a-asset-item>
+           <a-asset-item id="oldJar" src='objects/old_jar.gltf'></a-asset-item>
+           <a-asset-item id="sprayBottle" src='objects/sprayBottle.gltf'></a-asset-item>
+          <!--Water World  Items--------------------------------------------------------------------->
+
+
+          <!--Wind World Items--------------------------------------------------------------------->
+          <a-asset-item id="windColorCube" src='objects/windPosterCube.gltf'></a-asset-item>
+           <a-asset-item id="ceilingFan" src='objects/ceilingFan.gltf'></a-asset-item>
+           <a-asset-item id="phone" src='objects/phone.gltf'></a-asset-item>
+           <a-asset-item id="airPlane" src='objects/airPlane.gltf'></a-asset-item>
+          <!--Wind World  Items--------------------------------------------------------------------->
+
+           <!--Earth World Items--------------------------------------------------------------------->
+           <a-asset-item id="comicBook" src='objects/comicBook.gltf'></a-asset-item>
+           <a-asset-item id="comicBookOpen" src='objects/comicBookOpen.gltf'></a-asset-item>
+
+
+
+            <a-asset-item id="earthColorCube" src='objects/earthCube.gltf'></a-asset-item>
+             <a-asset-item id="newspaper" src='objects/newsPaper.gltf'></a-asset-item>
+           <a-asset-item id="earthBook" src='objects/earthBook.gltf'></a-asset-item>
+           <a-asset-item id="woodLogs" src='objects/woodLogs.gltf'></a-asset-item>
+          <!--Earth World  Items--------------------------------------------------------------------->
+
+        
+               
+
+
+
+            <!--fire  World Items--------------------------------------------------------------------->
+              
+               <a-asset-item id="fireColorCube" src='objects/firePosterCube.gltf'></a-asset-item>
+
+
+
+           <a-asset-item id="candleStickRed" src='objects/candleStickRed.gltf'></a-asset-item>
+
+           <a-asset-item id="candleStickGreen" src='objects/candleStickGreen.gltf'></a-asset-item>
+
+           <a-asset-item id="candleStickBlue" src='objects/candleStickBlue.gltf'></a-asset-item>
+
+          <!--fire World  Items--------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+        <!--Z0ne1 and Items--------------------------------------------------------------------->
+        <a-asset-item id="zone1_room" src='objects/Zone1.gltf'></a-asset-item>
+
+         <a-asset-item id="bed" src='objects/bed.gltf'></a-asset-item>
+
+
+
+
+
+
+
+
+         <!--Z0ne1 and Items--------------------------------------------------------------------->
+
+
+
+
+         <audio id="snd_steps" src="sounds/steps.wav"></audio>
+         <audio id="spooksBGM" src="sounds/spooks.mp3"></audio>
+         <audio id="lockedDoor" src="sounds/lockedDoor.wav" preload="auto"></audio>
+         <audio id="lighterClick" src="sounds/lighterclick.wav" ></audio>
+         <audio id="waterNoise" src="sounds/waterpour.wav"></audio>
+         <audio id="windNoise" src="sounds/wind.wav"></audio>
+         <audio id="earthNoise" src="sounds/earth.wav"></audio>
+         <audio id="pianohit" src="sounds/pianohit1.wav" preload="auto"></audio>
+         <audio id="pianohitlaugh" src="sounds/pianoHit_Laugh.wav" preload="auto"></audio>
+         <audio id="unlockNoise" src="sounds/unlock.wav"></audio>
+
+
+
+
+       </a-assets>
+
+
+  <!--*******************************************************************************************************-->
+  <!--*******************************************************************************************************-->
+      <!--Character Spawn-->
+     
+
+     <!-- Portals -->
+
+      <a-entity 
+            id="windowPortal_1"
+            gltf-model="#windowPortal"
+            position = "11.10 1.850 6.5"
+            rotation = "0 90 0"
+            shadow = "cast: true"
+            class="clickable">
+
+
+
+          </a-entity>
+
+
+            <a-entity 
+            id="doorPortal_1"
+            gltf-model="#doorPortal"
+            position = "5.15 .20 4.150"
+            rotation = "0 -90 0"
+            shadow = "cast: true"
+            sound="src: #lockedDoor; on: click"
+            check-table
+            class="clickable">
+
+            
+
+          </a-entity>
+
+
+          <a-entity 
+            id="windowPortal_2"
+            gltf-model="#windowPortal"
+            position = "11.10 1.850 7.95"
+            rotation = "0 90 0"
+            shadow = "cast: true"
+            class="clickable">
+
+          </a-entity>
+
+
+            <a-entity 
+            id="doorPortal_2"
+            gltf-model="#doorPortal"
+            position = "5.3 .10 9.850"
+            rotation = "0 0 0"
+            shadow = "cast: true"
+            sound="src: #lockedDoor; on: click"
+            check-table
+            class="clickable">
+
+
+            
+
+          </a-entity>
+      
+
+          <a-entity 
+            id="SpawnZone"
+            gltf-model="#Spawn_Room"
+            position = "8 .20 7"
+            shadow = "receive:true"
+            static-body>
+
+          </a-entity>
+
+          <!-- <a-box 
+            id="underGround" 
+            position="8.339 0.288 6.621" 
+            scale="0.2 0.2 0.2" 
+            color="pink"
+            class="clickable"
+            checkpoint="offset: 1 -9.5 1">
+          </a-box> -->
+
+
+        <!--Spawn Table with Ritual Items in place -->
+
+            <a-entity 
+            id="Spawntable"
+            gltf-model="#table"
+            position = "8.50 .20 7.596"
+            shadow = "cast: true">
+            </a-entity>
+
+
+            <a-entity 
+            id="Ritual_Candle"
+            gltf-model="#candle"
+            position = "9.019 .787 7.455"
+            shadow = "cast: true"
+            visible="false">
+            </a-entity>
+
+            <a-entity 
+            id="Ritual_WaterMug"
+            gltf-model="#waterMug"
+            position = "8.664 .787 7.697"
+            shadow = "cast: true"
+            visible="false">
+            </a-entity>
+
+
+           <a-entity 
+            id="Ritual_HairDryer"
+            gltf-model="#hairDryer"
+            position = "8.11 .787 7.381"
+            shadow = "cast: true"
+            visible="false">
+            </a-entity>
+
+           <a-entity 
+            id="Ritual_Plant"
+            gltf-model="#plant"
+            position = "7.983 .787 7.737"
+            shadow = "cast: true"
+            visible="false">
+            </a-entity>
+
+            <!--Spawn Table with Ritual Items in place -->
+
+
+
+
+
+
+
+
+
+            <!--Fire World Items -->
+
+              <a-entity 
+                id="Ritual_CandleStickRed"
+                scale= "2 1.2 2"
+                class="clickable"
+                gltf-model="#candleStickRed"
+                position = "7.446 .420 4.319"
+                pick-up="handObj: #Inventory_CandleStickRed; event: RedCandle"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Ritual_CandleStickGreen"
+                scale= "2 1.2 2"
+                class="clickable"
+                gltf-model="#candleStickGreen"
+                position = "7.936 .420 4.323"
+                pick-up="handObj: #Inventory_CandleStickGreen; event: GreenCandle"
+                shadow = "cast: true">
+               </a-entity>
+
+
+               <a-entity 
+                id="Ritual_CandleStickBlue"
+                scale= "2 1.2 2"
+                class="clickable"
+                gltf-model="#candleStickBlue"
+                position = "7.699 .417 4.303"
+                pick-up="handObj: #Inventory_CandleStickBlue; event: BlueCandle"
+                shadow = "cast: true">
+               </a-entity>
+
+
+           <!--Fire World Items -->
+
+
+            <!--Earth World Items -->
+
+              <a-entity 
+                id="Ritual_newsPaper"
+                 class="clickable"
+                gltf-model="#newspaper"
+                position = "5.351 .538 6.696"
+                rotation = "65.928 8.485 -24.096"
+                pick-up="handObj: #Inventory_NewsPaper; event: NewsPaper"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Ritual_earthBook"
+                 class="clickable"
+                gltf-model="#earthBook"
+                position = "5.416 .378 7.263"
+                pick-up="handObj: #Inventory_EarthBottle; event: Book"
+                shadow = "cast: true">
+               </a-entity>
+
+
+               <a-entity 
+                id="Ritual_woodLogs"
+                 class="clickable"
+                gltf-model="#woodLogs"
+                position = "9.538 .282 9.418"
+                pick-up="handObj: #Inventory_WoodLogs; event: Wood"
+                shadow = "cast: true">
+               </a-entity>
+
+
+           <!-- World Items -->
+
+
+
+            <!--Water World Items -->
+
+              <a-entity 
+                id="Ritual_waterBottle"
+                 class="clickable"
+                gltf-model="#waterBottle"
+                position = "7.596 .719 4.283"
+                pick-up="handObj: #Inventory_WaterBottle; event: WaterBottle"
+                shadow = "cast: true">
+               </a-entity>
+
+                <a-entity 
+                id="Ritual_oldJar"
+                 class="clickable"
+                gltf-model="#oldJar"
+                position = "8.222 .798 4.154"
+                pick-up="handObj: #Inventory_OldJar; event: Jug"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Ritual_sprayBottle"
+                 class="clickable"
+                gltf-model="#sprayBottle"
+                position = "8.543 .719 4.269"
+                pick-up="handObj: #Inventory_SprayBottle; event: SprayBottle"
+                shadow = "cast: true">
+               </a-entity>
+
+
+           <!--Water World Items -->
+
+
+
+            <!--Wind World Items -->
+
+              <a-entity 
+                id="Ritual_ceilingFan"
+                 class="clickable"
+                gltf-model="#ceilingFan"
+                position = "7.794 3.128 6.789"
+                pick-up="handObj: #left2; event: CeilingFan"
+                shadow = "cast: true">
+               </a-entity>
+
+                <a-entity 
+                id="Ritual_phone"
+                 class="clickable"
+                gltf-model="#phone"
+                rotation= "0 90 0"
+                position = "5.377 1.765 5.631"
+                pick-up="handObj: #left2; event: Phone"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Ritual_AirPlane"
+                 class="clickable"
+                gltf-model="#airPlane"
+                rotation = "0 20 0"
+                position = "9.10 2.193 4.249"
+                pick-up="handObj: #left2; event: AirPlane"
+                shadow = "cast: true">
+               </a-entity>
+
+
+           <!--Wind World Items -->
+
+
+
+
+          <a-entity 
+            id="Death_Knife"
+            class="clickable"
+            visible="false"
+            gltf-model="#knife"
+            position = "7.449 -.797 8.992"
+            shadow = "cast: true"
+            pick-up="handObj: #Inventory_knife; event: knife"
+            ></a-entity>
+
+
+
+
+
+
+          <!--World Poster Items-->
+
+          <a-entity 
+            id="Fire_poster"
+            gltf-model="#poster"  
+            position = "4.970 1.958 7.912"
+            rotation = "0 90 0"
+            shadow = "cast: true">
+          </a-entity>
+
+          <a-entity 
+            id="Fire_color"
+            gltf-model="#fireColorCube" 
+            position = "4.957 1.952 7.816"  
+            rotation = "0 90 0"
+            shadow = "cast: true"
+            check-fireposter
+            sound="src: #lighterClick">
+          </a-entity>
+
+
+
+
+           <a-entity 
+            id="Water_poster"
+            gltf-model="#poster"  
+            position = "7.654 1.958 10.029"
+            rotation = "0 180 0"
+            shadow = "cast: true">
+          </a-entity>
+
+          <a-entity 
+            id="Water_color"
+            gltf-model="#waterColorCube" 
+            position = "7.566 1.958 10.029"  
+            rotation = "180 0 0"
+            shadow = "cast: true"
+            check-waterposter
+            sound="src: #waterNoise">
+          </a-entity>
+
+
+
+            <a-entity 
+            id="Earth_poster"
+            gltf-model="#poster"  
+            position = "11.234 1.958 9.156"
+            rotation = "0 270 0"
+            shadow = "cast: true">
+          </a-entity>
+
+          <a-entity 
+            id="Earth_color"
+            gltf-model="#earthColorCube" 
+            position = "11.234 1.958 9.246"  
+            rotation = "180 90 0"
+            shadow = "cast: true"
+            check-earthposter
+            sound="src: #earthNoise">
+          </a-entity>
+
+
+            <a-entity 
+            id="Wind_poster"
+            gltf-model="#poster"  
+            position = "9.654 1.958 3.754"
+            
+            shadow = "cast: true">
+          </a-entity>
+
+          <a-entity 
+            id="Wind_color"
+            gltf-model="#windColorCube" 
+            position = "9.751 1.958 3.754"  
+            rotation = "0 0 0"
+            shadow = "cast: true"
+            check-windposter
+            sound="src: #windNoise">
+          </a-entity>
+
+        <!--World Poster Items-->
+
+
+
+
+
+         <!--World Prop Items-->
+
+           <a-entity 
+            id="Spawn_tvStand"
+            gltf-model="#tvStand"  
+            position = "7 0.1 4.5"
+            rotation = ""
+            shadow = "cast: true">
+
+          </a-entity>
+
+
+
+          <a-entity 
+            id="couch_1"
+            gltf-model="#couch1"  
+            position = "8 0 9.964"
+            rotation = "0 180 0"
+            shadow = "cast: true"
+            class= "clickable">
+          </a-entity>
+
+
+
+
+           <a-entity 
+            id="Spawn_bookShelf"
+            gltf-model="#bookShelf"  
+            position = "5.15 .20 7.5"
+            rotation = "0 90 0"
+            shadow = "cast: true">
+          </a-entity>
+
+           <!--World Prop Items-->
+
+        <a-entity 
+        id="world_light"
+
+        light="color: #ffffff; 
+        intensity: .3; 
+        type: ambient;">
+        
+      </a-entity>
+
+        <a-entity 
+        id="spawn_light"
+        position = "8 2.850 6.5"
+        
+
+
+        light="color: #ffffff; 
+        intensity: 0.2; 
+        type: point; 
+        castShadow: true
+        target: #Spawntable" 
+        >
+        
+      </a-entity>
+
+
+
+          <a-entity  
+
+          id="book1"
+          class="clickable"
+          position="5.167 1.079 7" 
+          rotation="90.369 9.731 -92.179"
+          visible="true"
+          pick-up="handObj: #Inventory_comic; event: book1"
+          gltf-model="#comicBook" > 
+
+          </a-entity>
+
+       <!-- Put chucky here-->
+
+        <a-entity 
+            id="Chucky_Spawn"
+            gltf-model="#chucky"
+            position = "8.50 .20 7.596"
+            shadow = "cast: true"
+            >
+
+          </a-entity> 
+
+
+         <a-sky id="LoseRoom" src= "#cave"
+        position = "9.073 -5.0 6.473"
+        radius="5"
+        side = "double"
+        ></a-sky>
+
+        <a-sky id="WinRoom" src= "#water"
+        position = "6.257 1.339 16.526"
+        radius="5"
+        side = "double"
+        ></a-sky>
+
+
+
+
+            <!-- Camera Rig -->
+    <a-entity id="camera-rig" 
+          position="6.890 0 6.5"
+          rotation = "0 15 0"
+          movement-controls="controls: checkpoint"
+
+
+          checkpoint-controls="mode: animate; animateSpeed: 10.0"
+          sound="src: #snd_steps; on: navigation-start; volume: 6"
+
+
+
+          event-set__start="_target: #blink; _event: navigation-start;
+                    animation.property: opacity;
+                    animation.to: 1;
+                    animation.dur: 300;
+                    animation.easing: easeOutQuart"
+
+            event-set__end="_target: #blink; _event: navigation-end;
+                    animation.to: 0;">
+
+
+                    
+          <a-entity 
+            id="weirdBaby2"
+            gltf-model="#weirdBaby2"
+            position= "-.028 -0.035 0.468"
+            rotation= "0 180 0">
+
+
+            <!-- Inventory -->
+            <a-box  id="left2" class="handItems" visible="false" scale="0.1 0.1 0.1"
+                material="color: red"
+                position="0.155 1.7 0.691"
+                ></a-box>
+
+            <a-entity id="Inventory_knife"
+                      class="handItems"
+                      visible="false"
+                      gltf-model="#knife"
+                      rotation="90 0 0"
+                      position="-0.772 .2 -.7"
+                      sound="src: #pianohit" ></a-entity>
+
+            <a-entity 
+                id="Inventory_comic"
+                class="clickable"
+                gltf-model="#comicBookOpen"
+                rotation = "54.485 200 0"
+                position = "0.167 1.7 0.704"
+                visible="false"
+                shadow = "cast: true">
+               </a-entity>
+
+           <a-entity 
+                id="Inventory_CandleStickRed"
+                gltf-model="#candleStickRed"
+                position = "0.1 1.64 0.704"
+                visible="false"
+                shadow = "cast: true">
+               </a-entity>
+
+             <a-entity 
+                id="Inventory_CandleStickGreen"
+                gltf-model="#candleStickGreen"
+                visible="false"
+                position = "0.1 1.64 0.704"
+                shadow = "cast: true">
+               </a-entity>
+
+
+               <a-entity 
+                id="Inventory_CandleStickBlue"
+                gltf-model="#candleStickBlue"
+                visible="false"
+                position = "0.1 1.64 0.704"
+                shadow = "cast: true">
+               </a-entity>
+
+            <a-entity 
+                id="Inventory_SprayBottle"
+                 class="clickable"
+                gltf-model="#sprayBottle"
+                position = "0.1 1.64 0.704"
+                visible="true"
+                shadow = "cast: true">
+               </a-entity>
+
+             <a-entity 
+                id="Inventory_WaterBottle"
+                gltf-model="#waterBottle"
+                visible="false"
+                position = "0.1 1.64 0.704"
+                shadow = "cast: true">
+               </a-entity>
+
+                <a-entity 
+                id="Inventory_OldJar"
+                gltf-model="#oldJar"
+                visible="false"
+                position = "0.15 1.7 0.704"
+                scale=".6 .6 .6"
+                shadow = "cast: true">
+               </a-entity>
+
+              <a-entity 
+                id="Inventory_NewsPaper"
+                gltf-model="#newspaper"
+                visible="false"
+                position = "0.15 1.75 0.8"
+                scale=".7 .7 .7"
+                rotation = "65.928 180 -24.096"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Inventory_WoodLogs"
+                gltf-model="#woodLogs"
+                visible="false"
+                position = "0.1 1.68 0.704"
+                scale=".4 .4 .4"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Inventory_EarthBook"
+                gltf-model="#earthBook"
+                visible="false"
+                position = "0.1 1.64 0.704"
+                visible="false"
+                shadow = "cast: true">
+               </a-entity>
+
+                <a-entity 
+                id="Inventory_CeilingFan"
+                gltf-model="#ceilingFan"
+                visible="false"
+                position = "0.1 1.64 0.704"
+                shadow = "cast: true">
+               </a-entity>
+
+                <a-entity 
+                id="Inventory_Phone"
+                gltf-model="#phone"
+                visible="false"
+                rotation= "0 90 0"
+                position = "0.1 1.64 0.704"
+                shadow = "cast: true">
+               </a-entity>
+
+               <a-entity 
+                id="Inventory_AirPlane"
+                gltf-model="#airPlane"
+                visible="false"
+                rotation = "0 20 0"
+                position = "0.1 1.64 0.704"
+                shadow = "cast: true">
+               </a-entity>
+
+            <!-- Right reference -->
+            <!-- <a-box  id="right1" class="handItems rightHand" visible="false" scale="0.1 0.1 0.1"
+                material="color: red"
+                position="-0.109 1.565 0.884"
+                ></a-box> -->
+              </a-entity>
+ 
+
+      <!--  Camera:progressive controls  -->
+      <a-entity progressive-controls>
+        <a-camera look-controls
+                  wasd-controls="enabled: true"
+                  >
+          <a-entity id="BGM" sound="src: #spooksBGM; autoplay: false; volume: .25; loop: true; positional: false"></a-entity>
+          <a-cursor fuse="true"
+                geometry="primitive: sphere; radius: 0.005"
+                material="color: #000000; shader: flat; opacity: 0.5"
+                raycaster="objects: .clickable"
+                animation__fusing="property: scale;
+                          startEvents: fusing;
+                          easing: linear;
+                          fill: foward;
+                          dur: 1000;
+                          from: 1 1 1;
+                          to: 2 2 2"
+                animation__mouseleave="property: scale;
+                             startEvents: mouseleave;
+                             easing: linear;
+                             fill: backwards;
+                             dur: 1000;
+                             from: 2 2 2;
+                             to: 1 1 1">
+        </a-cursor>
+        <!-- setup for "blink" the black screen  -->
+        <a-image id="blink" src="#black" position="0 0 -0.3" opacity="0"></a-image>
+
+
+        </a-camera>
+
+
+
+
+        </a-entity>
+      </a-entity>
+
+
+    </a-scene>
+
+    <div  id="start" style="  display: block;
+                              text-align: center;
+                              width: 100%;
+                              height: 100%;
+                              padding-top: 15px;
+                              padding-bottom: 15px;">
+      <p>best experienced with headphones</p>
+      <p>recommended to play standing</p>
+      <p></p>
+      <p>Works with Samsung internet and Firefox mobile</p>
+      <input id="showCb" type="checkbox" onclick="showButton()"> are you ready? <p></p>
+      <button   id="startButton" onclick="startGame()" 
+                style=" display: none">start</button>
+  </div>
+
+
+
+</body>
+</html>

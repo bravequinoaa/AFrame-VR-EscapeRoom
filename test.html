@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Test</title>
+	 	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+	 	<script src="js/app.js" type="text/javascript"></script>
+	 	<script src="js/comp.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<a-scene>
+			<a-assets>
+				 <audio id="lockedDoor" src="sounds/lockedDoor.wav">
+
+
+			</a-assets>
+
+			<a-box	id="box"
+					position="0 .5 -3"
+					material="color: red"
+					pickup="handObj: #handBox; id: handBox"
+					logic="item: handBox; event: red"></a-box>
+
+			<a-box	id="box2"
+					position="-3 .5 -3"
+					material="color: red"
+					pickup="handObj: #handBox2; id: handBox2"></a-box>
+
+			<a-box 	id="followBox"
+					position="0 .5 -9"
+					visible="false"
+					material="color: red"
+					></a-box>
+
+			<a-box	id="interactBox"
+					position="3 .5 -3"
+					change-color
+					empty-hands></a-box>
+
+			<a-box	id="blinkBox"
+					position="3 .5 -9"
+					material="color: yellow"
+					locked-door></a-box>
+
+
+
+
+
+			<a-cylinder scale="2 2 2"
+						position="0 -1 0"></a-cylinder>
+
+			<a-camera	id="camera" wasd-controls="enabled: true; acceleration: 50">
+				<a-box	id="handBox" visible="false" scale="0.25 0.25 0.25"
+						class="handItems"
+						material="color: red"
+						position="-.5 -.22 -1"
+						></a-box>
+				<a-box	id="handBox2" visible="false" scale="0.25 0.25 0.25"
+						class="handItems"
+						material="color: red"
+						position=".5 -.22 -1"
+						></a-box>
+
+			<a-cursor  fuse="true"
+	  					  geometry="primitive: sphere; radius: 0.005"
+					  	  material="color: #000000; shader: flat; opacity: 0.5">
+					  	</a-cursor>
+			</a-camera>
+
+			<a-sky color="#003099"></a-sky>
+		</a-scene>
+	</body>
+</html>	

@@ -1,2 +1,5 @@
-# AFrame-VR-EscapeRoom
-VR Escape Room experience built on A-Frame for my senior capstone
+# SeniorProject
+Repository for our Web VR experience
+
+live website on Kean Server
+http://eve.kean.edu/~franciwi/Dream_Scape/
